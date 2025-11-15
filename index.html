@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Pokemon Battle — Ultimate Edition</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="module" src="./main.js"></script>
+  <style>
+    body{font-family:Arial;margin:0;background:#dff3ff;padding:20px;}
+    h1{text-align:center;}
+    .arena{display:flex;justify-content:space-around;margin-top:20px;flex-wrap:wrap;}
+    .player{background:white;padding:16px;border-radius:16px;width:280px;
+            box-shadow:0 6px 20px rgba(0,0,0,.15);text-align:center;}
+    .player img{width:200px;height:200px;object-fit:contain;}
+    .bar{background:#ddd;height:20px;border-radius:10px;margin-top:10px;overflow:hidden;}
+    .progress{height:100%;background:#4aa3ff;width:100%;
+              transition:width .3s ease;}
+    button{padding:12px 18px;border:0;border-radius:10px;background:#ff4757;
+           color:white;cursor:pointer;font-size:16px;margin:5px;}
+    #controls{text-align:center;margin-top:20px;}
+    #logs{background:white;padding:10px;border-radius:12px;
+          margin-top:20px;max-height:250px;overflow-y:auto;
+          box-shadow:0 4px 10px rgba(0,0,0,.1);}
+    #logs p{margin:4px 0;}
+  </style>
+</head>
+<body>
+
+<h1>Pokémon Battle — Ultimate Edition</h1>
+
+<div class="arena">
+  <div class="player">
+    <h2 id="player1-name"></h2>
+    <img src="./assets/pikachu.png">
+    <div id="player1-hp"></div>
+    <div class="bar"><div id="player1-progress" class="progress"></div></div>
+  </div>
+
+  <div class="player">
+    <h2 id="player2-name"></h2>
+    <img src="./assets/charmander.png">
+    <div id="player2-hp"></div>
+    <div class="bar"><div id="player2-progress" class="progress"></div></div>
+  </div>
+</div>
+
+<div id="controls">
+  <button id="btn-attack">⚡ Атака гравця</button>
+  <button id="btn-enemy">🔥 Атака противника</button>
+  <button id="btn-newgame">🔄 Нова битва</button>
+</div>
+
+<div id="logs"></div>
+
+</body>
+</html>
